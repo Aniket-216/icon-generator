@@ -4,7 +4,7 @@
   "repository": "https://github.com/Aniket-216/icon-generator.git",
   "author": "aniket-216 <aniketshinde216@gmail.com>",
   "license": "MIT",
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "yarn@4.1.0",
   "publishConfig": {
     "access": "public"
   },
