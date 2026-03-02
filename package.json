@@ -4,7 +4,6 @@
   "repository": "https://github.com/Aniket-216/icon-generator.git",
   "author": "aniket-216 <aniketshinde216@gmail.com>",
   "license": "MIT",
-  "packageManager": "yarn@4.1.0",
   "publishConfig": {
     "access": "public"
   },
@@ -33,31 +32,31 @@
     "react": "*"
   },
   "scripts": {
-    "prepack": "yarn build",
-    "generate:icona": "node ./icona.js",
-    "generate:react-index": "node scripts/generate-react-index.cjs",
-    "build": "yarn generate:react-index && yarn build:tsc && yarn build:js",
+    "prepack": "bun run build",
+    "generate:icona": "bun icona.js",
+    "generate:react-index": "bun scripts/generate-react-index.cjs",
+    "build": "bun run generate:react-index && bun run build:tsc && bun run build:js",
     "build:tsc": "tsc --emitDeclarationOnly",
-    "build:js": "node build.cjs",
-    "release": "yarn changeset publish",
-    "cs-version": "changeset version && yarn install --no-immutable"
+    "build:js": "bun build.cjs",
+    "release": "bun run changeset publish",
+    "cs-version": "changeset version && bun install"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.2",
+    "@changesets/cli": "^2.29.8",
     "@icona/generator": "^0.4.1",
     "@icona/types": "^0.4.1",
     "@icona/utils": "^0.4.1",
     "@svgr/plugin-jsx": "^8.0.1",
     "@svgr/plugin-prettier": "^8.0.1",
     "@svgr/plugin-svgo": "^8.0.1",
-    "@types/react": "^18.2.13",
-    "@types/react-dom": "^18.2.6",
-    "esbuild": "^0.18.6",
-    "glob": "^10.3.0",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "esbuild": "^0.24.2",
+    "glob": "^11.1.0",
     "nanobundle": "^1.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "svgo": "^3.0.2",
-    "typescript": "^5.1.3"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "svgo": "^3.3.2",
+    "typescript": "^5.9.3"
   }
 }
